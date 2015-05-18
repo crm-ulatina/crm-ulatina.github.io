@@ -33,6 +33,23 @@
 
 		<!-- Custom css --> 
 		<link href="css/custom.css" rel="stylesheet">
+
+		<style>
+		    .google-maps {
+		        position: relative;
+		        padding-bottom: 75%; // This is the aspect ratio
+		        height: 0;
+		        overflow: hidden;
+		    }
+		    .google-maps iframe {
+		        position: absolute;
+		        top: 0;
+		        left: 0;
+		        width: 100% !important;
+		        height: 100% !important;
+		    }
+		</style>
+
 	</head>
 
 	<body class="no-trans">
@@ -96,8 +113,8 @@
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="#banner">Inicio</a></li>
 												<li><a href="#about">Acerca</a></li>
-												<li><a href="#services">Áreas</a></li>
-												<li><a href="#portfolio">Galeria</a></li>
+												<li><a href="#portfolio">Trabajos</a></li>
+												<li><a href="#services">Galeria</a></li>
 												<li><a href="#clients">Logros</a></li>
 												<li><a href="#contact">Contacto</a></li>
 											</ul>
@@ -151,14 +168,12 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi adipisci illo, voluptatum ipsam fuga error commodi architecto, laudantium culpa tenetur at id, beatae placeat deserunt iure quas voluptas fugit eveniet.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ducimus explicabo quibusdam temporibus deserunt doloremque pariatur ea, animi a. Delectus similique atque eligendi, enim vel reiciendis deleniti neque aliquid, sit?</p>
+								<p><b>C.R.M. (Club de Robótica y Mecatrónica)</b> es un emprendimiento extracurricular, llevado a cabo por estudiantes de la <b>Universidad Latina de Panamá</b>, orientado al diseño y construcción de plataformas robóticas móviles.</p>
+								<p>Pueden acceder alumnos que se encuentren en cualquier etapa de la ingenieria y de cualquiera de las ingenierías, especialmente la ingeniería mecatrónica.</p>
 								<ul class="list-unstyled">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Reiciendis deleniti neque aliquid</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Ipsam fuga error commodi</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Dignissimos molestiae necessitatibus</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> C.R.M. busca introducir a los alumnos de los primeros años a la ingeniería de aplicación</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Brinda apoyo a los estudiantes de los cursos superiores que deseen realizar proyectos integradores en el área de la robótica</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Integra a estudiantes de otras especialidades que deseen aprender (o aplicar sus conocimientos) sobre electrónica, programación y mecánica, en el área de la robótica.</li>
 								</ul>
 							</div>
 						</div>
@@ -229,7 +244,7 @@
 		<!-- ================ -->
 		<div class="section translucent-bg bg-image-1 blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="services"  class="text-center title">Áreas de Interés</h1>
+				<h1 class="text-center title">Áreas de Interés</h1>
 				<div class="space"></div>
 				<div class="row text-center">
 	                <div class="col-md-4">
@@ -278,10 +293,11 @@
 		<!-- ================ -->
 		<div class="section">
 			<div class="container">
-				<h1 class="text-center title" id="portfolio">Galeria</h1>
+				<h1 class="text-center title" id="portfolio">Trabajos</h1>
 				<div class="separator"></div>
-				<p class="lead text-center">Lorem ipsum dolor sit amet laudantium molestias similique.<br> Quisquam incidunt ut laboriosam.</p>
-				<br>			
+					<p class="lead text-center">El Club de Robótica y Mecatrónica cuenta con una gama de proyectos, cursos y tutoriales diseñados para la preparación de los integrantes y aspirantes del mismo.
+					<br>A continuación el listado de trabajos realizados:</p>
+					<br>			
 				<div class="row object-non-visible" data-animation-effect="fadeIn">
 					<div class="col-md-12">
 
@@ -424,6 +440,21 @@
 
 		<!-- section start -->
 		<!-- ================ -->
+		<div class="section translucent-bg bg-image-1">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="services"  class="text-center title">Galeria</h1>
+				<div class="space"></div>
+				<div class="row text-center">
+	            	<a class="embedly-card" data-card-theme="dark" href="https://www.facebook.com/media/set/?set=a.351323198406672.1073741830.343491285856530">Preparatorios Robocup 2015</a>
+					<script async src="http://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+					<!-- http://embed.ly/provider/facebook -->
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
 		<div class="section translucent-bg bg-image-2 pb-clear">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
 				<h1 id="clients" class="title text-center">Logros</h1>
@@ -438,11 +469,13 @@
 								<h3 class="media-heading">Robocup 2015</h3>
 								<blockquote>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>
-									<footer><cite title="Source Title">Haga click aquí para mayor información</cite></footer>
+									<footer>
+										<a data-toggle="modal" data-target="#robocup15"><cite title="Source Title">Haga click aquí para mayor información</cite></a></footer>
 								</blockquote>
 							</div>
 						</div>
 					</div>
+
 					<!-- 
 					<div class="col-md-4">
 						<div class="media testimonial">
@@ -561,10 +594,15 @@
 									<li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/HtmlCoder/714570988650168"><i class="fa fa-facebook"></i></a></li>
 									<li class="twitter"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></a></li>
 									<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+									<li class="youtube"><a target="_blank" href="http://youtube.com"><i class="fa fa-youtube"></i></a></li>
 								</ul>
 							</div>
 							<div class="col-sm-6 text-center">
-		                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3940.393146044488!2d-79.517837!3d9.027854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8327dc82e89%3A0xdc298f0eb0e51dc4!2sUniversidad+Latina+de+Panam%C3%A1!5e0!3m2!1sen!2sus!4v1427824664144" frameborder="0" style="border:0"></iframe>
+
+								<div class="google-maps">
+								    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3940.393146044488!2d-79.517837!3d9.027854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8327dc82e89%3A0xdc298f0eb0e51dc4!2sUniversidad+Latina+de+Panam%C3%A1!5e0!3m2!1sen!2sus!4v1427824664144" frameborder="0" style="border:0"></iframe>
+								</div>
+
 	                    	</div>
 						</div>
 						<div class="col-sm-6">
@@ -613,7 +651,35 @@
 		</footer>
 		<!-- footer end -->
 
-	<!-- Modal #1-->
+	<!-- Modal Metas-->
+	<div class="modal fade" id="robocup15" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="project-1-label">Project Title</h4>
+				</div>
+				<div class="modal-body">
+					<h3>Project Description</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+								<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+							</div>
+						<div class="col-md-6">
+							<img src="images/project/robotino.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal end -->
+
+	<!-- Modal Trabajos-->
 	<div class="modal fade" id="robotino" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
